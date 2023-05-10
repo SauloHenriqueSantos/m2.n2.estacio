@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Incoporação do Bootstrap no link acima-->
+</head>
+<body class="bg-warning">
+  <header>
+    <nav class="navbar navbar-expand bg-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ordenando.html">Procedimento 01</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="receitas.html">Procedimento 02</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="usuarios.html">Procedimento 03</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="text-center m-3">Usuários de Teste via REST</h1>
+    <div id="usuarios" class="container-fluid ">
+      <div class="row d-flex justify-content-center">
+        <div class="card col-3 p-2 m-3 text-center" v-for= "(user,index) in users" :key="index">
+          <img class="card-img-top" :src="user.avatar">
+          <div class="card-body">
+            <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+            <p class="card-text">{{user.email}}</p>
+        </div>
+      </div>
+      <p class="text-center mt-3 fw-bold">Dados fornecidos por <a href="https://reqres.in/" target="_blank">ReqRes</a></p>
+    </div>
+  </main>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- importação do Vue-->
+  <script src="./usuarios.js"></script>
+<!--Bootstrap abaixo-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
